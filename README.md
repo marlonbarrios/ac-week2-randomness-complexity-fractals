@@ -49,17 +49,6 @@ This project presents a series of interactive sketches demonstrating various for
    - Multiple noise scales
    - Emergent pattern formation
 
-### Complexity and Emergence
-9. **Emergence**
-   - Self-organizing particle systems
-   - Local rules creating global patterns
-   - Demonstrates collective behavior
-
-10. **Boids**
-    - Classic flocking simulation
-    - Based on Craig Reynolds' algorithm
-    - Shows emergence through simple rules
-
 ### Fractals and Recursion
 11. **Recursive Circles**
     - Basic recursive pattern
@@ -95,6 +84,21 @@ This project presents a series of interactive sketches demonstrating various for
     - Demonstrates recursive subdivision
     - Chaos game implementation
     - Perfect self-similarity
+
+### Complex Systems and Emergence
+16. **Boids**
+    - Classic flocking simulation
+    - Based on Craig Reynolds' algorithm
+    - Shows emergence through simple rules
+    - Collective intelligence
+    - Natural movement patterns
+
+17. **Flocking**
+    - Self-organizing particle systems
+    - Local rules creating global patterns
+    - Demonstrates collective behavior
+    - Phase transitions
+    - Pattern formation
 
 ## Technical Implementation
 - Built with p5.js

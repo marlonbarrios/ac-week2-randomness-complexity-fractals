@@ -98,13 +98,13 @@
     <div class="menu-item" data-sketch="sketch6">Noise Comparison</div>
     <div class="menu-item" data-sketch="sketch7">Flow Field</div>
     <div class="menu-item" data-sketch="sketch8">Field Patterns</div>
-    <div class="menu-item" data-sketch="sketch9">Emergence</div>
-    <div class="menu-item" data-sketch="sketch10">Boids</div>
     <div class="menu-item" data-sketch="sketch11">Recursive Circles</div>
     <div class="menu-item" data-sketch="sketch12">Branching Tree</div>
     <div class="menu-item" data-sketch="sketch13">Mandelbrot Set</div>
     <div class="menu-item" data-sketch="sketch14">Julia Set</div>
     <div class="menu-item" data-sketch="sketch15">Sierpinski</div>
+    <div class="menu-item" data-sketch="sketch16">Boids</div>
+    <div class="menu-item" data-sketch="sketch17">Flocking</div>
     
     <div id="description">
       Studies in motion, randomness, and complexity.
@@ -137,12 +137,6 @@
     <div id="sketch8" class="sketch-container">
       <div class="sketch-label">Field Patterns</div>
     </div>
-    <div id="sketch9" class="sketch-container">
-      <div class="sketch-label">Mandelbrot Set</div>
-    </div>
-    <div id="sketch10" class="sketch-container">
-      <div class="sketch-label">Emergence</div>
-    </div>
     <div id="sketch11" class="sketch-container">
       <div class="sketch-label">Recursive Circles</div>
     </div>
@@ -157,6 +151,12 @@
     </div>
     <div id="sketch15" class="sketch-container">
       <div class="sketch-label">Sierpinski Triangle</div>
+    </div>
+    <div id="sketch16" class="sketch-container">
+      <div class="sketch-label">Boids</div>
+    </div>
+    <div id="sketch17" class="sketch-container">
+      <div class="sketch-label">Flocking</div>
     </div>
   </div>
 
@@ -193,13 +193,13 @@
         sketch6: noiseComparison,
         sketch7: perlinFlow,
         sketch8: fieldPatterns,
-        sketch9: emergence,
-        sketch10: boids,
         sketch11: recursiveCircles,
         sketch12: branchingTree,
         sketch13: mandelbrot,
         sketch14: juliaSet,
-        sketch15: sierpinski
+        sketch15: sierpinski,
+        sketch16: boids,
+        sketch17: emergence
       };
 
       let currentSketch = null;
@@ -248,13 +248,13 @@
             sketch6: "Comparison between random noise and Perlin noise.",
             sketch7: "Artistic flow field using Perlin noise for smooth motion.",
             sketch8: "Field patterns using Perlin noise.",
-            sketch9: "Complex flocking patterns emerge from simple rules of alignment, cohesion, and separation.",
-            sketch10: "Classic boids flocking simulation with visible interaction ranges and clearer movement patterns.",
             sketch11: "Interactive recursive pattern generation with nested circles and depth control.",
             sketch12: "Recursive branching tree with interactive angle control and gentle animation.",
             sketch13: "The famous Mandelbrot Set fractal with zoom capability.",
             sketch14: "Interactive Julia Set fractal. Drag mouse to explore different complex constants.",
-            sketch15: "Sierpinski Triangle demonstrated through both chaos game and recursive methods. Press M to switch modes."
+            sketch15: "Sierpinski Triangle demonstrated through both chaos game and recursive methods. Press M to switch modes.",
+            sketch16: "Classic boids flocking simulation demonstrating emergent collective intelligence.",
+            sketch17: "Complex flocking patterns emerge from simple rules of local interaction and collective behavior."
           };
           
           document.getElementById('description').textContent = 
