@@ -4,6 +4,8 @@ A collection of interactive visualizations exploring fundamental concepts in alg
 
 ![Motion Studies Preview](image.png)
 
+## Live App
+[**→ Launch the Motion Studies App**](https://marlonbarrios.github.io/ac-week2-randomness-complexity-fractals/)
 
 ## Overview
 This project presents a series of interactive sketches demonstrating various forms of motion, randomness, and emergent patterns using p5.js. Each visualization explores different aspects of algorithmic behavior, from simple random walks to complex particle systems.
