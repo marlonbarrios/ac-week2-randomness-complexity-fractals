@@ -2,6 +2,9 @@
 
 A collection of interactive visualizations exploring fundamental concepts in algorithmic art and computational creativity.
 
+![Motion Studies Preview](image.png)
+
+
 ## Overview
 This project presents a series of interactive sketches demonstrating various forms of motion, randomness, and emergent patterns using p5.js. Each visualization explores different aspects of algorithmic behavior, from simple random walks to complex particle systems.
 
