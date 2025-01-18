@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Motion Studies</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      padding: 20px;
+      background: white;
+      color: #333;
+      font-family: Arial;
+      margin: 0;
+      display: flex;
+    }
+    
+    #menu {
+      width: 200px;
+      padding: 20px;
+      background: white;
+      border-right: 1px solid #eee;
+    }
+    
+    #content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    
+    .menu-item {
+      padding: 8px 12px;
+      margin: 5px 0;
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .menu-item:hover {
+      background: #f8f8f8;
+      border-color: #ddd;
+    }
+    
+    .menu-item.active {
+      background: #f0f0f0;
+      border-color: #ddd;
+    }
+    
+    .sketch-container {
+      display: none;
+    }
+    
+    .sketch-container.active {
+      display: block;
+    }
+    
+    canvas {
+      margin-bottom: 20px;
+      border: 1px solid #eee;
+    }
+    
+    .sketch-label {
+      color: #666;
+      text-align: left;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+    #description {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f8f8;
+      border-radius: 3px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #666;
+    }
+    
+    .signature {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 10px;
+      color: #999;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <!-- Side Menu -->
+  <div id="menu">
+    <div class="menu-item" data-sketch="sketch1">Brownian Motion</div>
+    <div class="menu-item" data-sketch="sketch2">Colorful Brownian</div>
+    <div class="menu-item" data-sketch="sketch3">Random Walk</div>
+    <div class="menu-item" data-sketch="sketch4">Interactive Walkers</div>
+    <div class="menu-item" data-sketch="sketch5">Noise Pixels</div>
+    <div class="menu-item" data-sketch="sketch6">Noise Comparison</div>
+    <div class="menu-item" data-sketch="sketch7">Flow Field</div>
+    <div class="menu-item" data-sketch="sketch8">Field Patterns</div>
+    <div class="menu-item" data-sketch="sketch9">Emergence</div>
+    <div class="menu-item" data-sketch="sketch10">Boids</div>
+    <div class="menu-item" data-sketch="sketch11">Recursive Circles</div>
+    <div class="menu-item" data-sketch="sketch12">Branching Tree</div>
+    <div class="menu-item" data-sketch="sketch13">Mandelbrot Set</div>
+    <div class="menu-item" data-sketch="sketch14">Julia Set</div>
+    <div class="menu-item" data-sketch="sketch15">Sierpinski</div>
+    
+    <div id="description">
+      Studies in motion, randomness, and complexity.
+    </div>
+  </div>
+  
+  <!-- Content Area -->
+  <div id="content">
+    <div id="sketch1" class="sketch-container">
+      <div class="sketch-label">Brownian Motion</div>
+    </div>
+    <div id="sketch2" class="sketch-container">
+      <div class="sketch-label">Colorful Brownian Motion</div>
+    </div>
+    <div id="sketch3" class="sketch-container">
+      <div class="sketch-label">Random Walk</div>
+    </div>
+    <div id="sketch4" class="sketch-container">
+      <div class="sketch-label">Interactive Random Walkers</div>
+    </div>
+    <div id="sketch5" class="sketch-container">
+      <div class="sketch-label">Noise Pixels</div>
+    </div>
+    <div id="sketch6" class="sketch-container">
+      <div class="sketch-label">Noise Comparison</div>
+    </div>
+    <div id="sketch7" class="sketch-container">
+      <div class="sketch-label">Flow Field</div>
+    </div>
+    <div id="sketch8" class="sketch-container">
+      <div class="sketch-label">Field Patterns</div>
+    </div>
+    <div id="sketch9" class="sketch-container">
+      <div class="sketch-label">Mandelbrot Set</div>
+    </div>
+    <div id="sketch10" class="sketch-container">
+      <div class="sketch-label">Emergence</div>
+    </div>
+    <div id="sketch11" class="sketch-container">
+      <div class="sketch-label">Recursive Circles</div>
+    </div>
+    <div id="sketch12" class="sketch-container">
+      <div class="sketch-label">Branching Tree</div>
+    </div>
+    <div id="sketch13" class="sketch-container">
+      <div class="sketch-label">Mandelbrot Set</div>
+    </div>
+    <div id="sketch14" class="sketch-container">
+      <div class="sketch-label">Julia Set</div>
+    </div>
+    <div id="sketch15" class="sketch-container">
+      <div class="sketch-label">Sierpinski Triangle</div>
+    </div>
+  </div>
+
+  <!-- Load sketches -->
+  <script src="brownian_motion.js"></script>
+  <script src="brownian_motion_rainbow.js"></script>
+  <script src="random_walk.js"></script>
+  <script src="random_walk_interactive.js"></script>
+  <script src="mandelbrot.js"></script>
+  <script src="noise_comparison.js"></script>
+  <script src="perlin_flow.js"></script>
+  <script src="field_patterns.js"></script>
+  <script src="noise_pixels.js"></script>
+  <script src="emergence.js"></script>
+  <script src="boids.js"></script>
+  <script src="julia_set.js"></script>
+  <script src="sierpinski.js"></script>
+  <script src="branching_tree.js"></script>
+  <script src="recursive_circles.js"></script>
+
+  <!-- Main script -->
+  <script>
+    // Wait for all scripts to load
+    window.addEventListener('load', function() {
+      console.log('Loading sketches...'); // Debug log
+      
+      // Create sketch instances
+      const sketches = {
+        sketch1: brownianMotion,
+        sketch2: colorfulBrownian,
+        sketch3: randomWalk,
+        sketch4: randomWalkInteractive,
+        sketch5: noisePixels,
+        sketch6: noiseComparison,
+        sketch7: perlinFlow,
+        sketch8: fieldPatterns,
+        sketch9: emergence,
+        sketch10: boids,
+        sketch11: recursiveCircles,
+        sketch12: branchingTree,
+        sketch13: mandelbrot,
+        sketch14: juliaSet,
+        sketch15: sierpinski
+      };
+
+      let currentSketch = null;
+      let p5Instance = null;
+
+      // Handle menu clicks
+      const menuItems = document.querySelectorAll('.menu-item');
+      const sketchContainers = document.querySelectorAll('.sketch-container');
+      
+      menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          console.log('Menu item clicked:', this.getAttribute('data-sketch')); // Debug log
+          
+          // Remove active class from all items
+          menuItems.forEach(mi => mi.classList.remove('active'));
+          sketchContainers.forEach(s => s.classList.remove('active'));
+          
+          // Add active class to clicked item
+          this.classList.add('active');
+          
+          // Get sketch container
+          const sketchId = this.getAttribute('data-sketch');
+          const container = document.getElementById(sketchId);
+          container.classList.add('active');
+          
+          // Remove previous sketch if exists
+          if (p5Instance) {
+            console.log('Removing previous sketch'); // Debug log
+            p5Instance.remove();
+            p5Instance = null;
+          }
+          
+          // Create new sketch
+          if (sketches[sketchId]) {
+            console.log('Creating new sketch:', sketchId); // Debug log
+            p5Instance = new p5(sketches[sketchId], container);
+          }
+          
+          // Update description
+          const descriptions = {
+            sketch1: "Classic Brownian motion simulation showing random particle movement.",
+            sketch2: "Colorful variation of Brownian motion with rainbow trails.",
+            sketch3: "Simple random walk demonstration with step-by-step movement.",
+            sketch4: "Interactive random walkers that respond to each other.",
+            sketch5: "Pixel-based comparison of random vs Perlin noise in grayscale.",
+            sketch6: "Comparison between random noise and Perlin noise.",
+            sketch7: "Artistic flow field using Perlin noise for smooth motion.",
+            sketch8: "Field patterns using Perlin noise.",
+            sketch9: "Complex flocking patterns emerge from simple rules of alignment, cohesion, and separation.",
+            sketch10: "Classic boids flocking simulation with visible interaction ranges and clearer movement patterns.",
+            sketch11: "Interactive recursive pattern generation with nested circles and depth control.",
+            sketch12: "Recursive branching tree with interactive angle control and gentle animation.",
+            sketch13: "The famous Mandelbrot Set fractal with zoom capability.",
+            sketch14: "Interactive Julia Set fractal. Drag mouse to explore different complex constants.",
+            sketch15: "Sierpinski Triangle demonstrated through both chaos game and recursive methods. Press M to switch modes."
+          };
+          
+          document.getElementById('description').textContent = 
+            descriptions[sketchId] || "Click on a visualization to view it.";
+        });
+      });
+      
+      // Activate first sketch by default
+      console.log('Activating first sketch'); // Debug log
+      menuItems[0].click();
+    });
+  </script>
+
+  <div class="signature">
+    <p>Created by Marlon Barrios Solano</p>
+    <p>Algorithmic Creativity - University of Florida Spring 2024</p>
+    <p>Week 2: Randomness, Chaos and Complexity</p>
+  </div>
+</body>
+</html>
